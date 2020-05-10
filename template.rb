@@ -26,7 +26,7 @@ def add_users
   route "root to: 'home#index'"
 
   # Create Devise User
-  generate :devise, "User", "username", "name", "admin:boolean"
+  generate :devise, "User", "name", "admin:boolean"
 
   # set admin boolean to false by default
   in_root do
@@ -106,5 +106,5 @@ after_bundle do
   say "$ cd #{app_name}", :yellow
   say
   say "Then run:"
-  say "$ rails server", :green
+  say "$ foreman start", :green
 end
